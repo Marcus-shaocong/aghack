@@ -37,14 +37,14 @@ Page({
   onLoad: function (options) {
     console.log("onLoad")
     console.log("testData", testData)
-   // this.getData();
-    this.setData({
-      questions: testData.testData,
-      isLoadingFinished:true,
-      currentQuestion:testData.testData[0],
-      maxQ:testData.testData.length
-    })
-    this.nextQuestion()
+     this.getData();
+    // this.setData({
+    //   questions: testData.testData,
+    //   isLoadingFinished:true,
+    //   currentQuestion:testData.testData[0],
+    //   maxQ:testData.testData.length
+    // })
+    // this.nextQuestion()
   },
 
   onReady: function () {

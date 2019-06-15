@@ -20,10 +20,10 @@
 
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
-          <button class=" {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="primary" bindtap="answerKw" data-index="1" disabled="{{disableBtn}}">Kitchen waste</button>
+          <button class=" {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="primary" bindtap="answerKw" data-index="1" disabled="{{disableBtn}}">Household food waste</button>
           <button class=" {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="warn" bindtap="answerHw" data-index="2" disabled="{{disableBtn}}">Harmful waste</button>
           <button class="btn-grep {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="primary" bindtap="answerR" data-index="3" disabled="{{disableBtn}}">Recyclable</button>
-          <button class="btn-blue {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="warn" bindtap="answerO" data-index="4" disabled="{{disableBtn}}">Other waste</button>
+          <button class="btn-blue {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="warn" bindtap="answerO" data-index="4" disabled="{{disableBtn}}">Residual waste</button>
         </view>
       </view>
 

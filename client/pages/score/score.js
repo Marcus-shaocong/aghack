@@ -9,7 +9,7 @@ Page({
     iterationList: [],
     results: [0, 1, 0, 0, 1],
     answerInfo: ["wrong", "right"],
-    imageUrl: ["/pages/resources/wrong.png", "/pages/resources/right.png"],
+    imageUrl: ["../../resources/wrong.png", "../../resources/right.png"],
 
     nodes: [[{
       name: 'span',

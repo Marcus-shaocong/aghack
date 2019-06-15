@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<view class="page page__bd_spacing theme-bg">
+<view class="page">
+<view class="page__bd_spacing theme-bg">
 
   <view class='centered' bindtap="startQuiz">
     <image src='/resources/design/logo.png' class='logo-img' />
@@ -23,4 +24,5 @@
 </view>
   
 
+</view>
 </view>
