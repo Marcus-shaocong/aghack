@@ -173,47 +173,22 @@ Page({
 
   getData: function () {
     var that = this
-    let url = "https://tutorweb.rikai-bots.com/api/cms/many/truefalse"
+    let url = "https://xinjushi.xyz/api/trash"
     console.log("req to", url)
-    let tags = { $in: ['hsk1', 'hsk2'] }
     wx.request({
       url: url,
       method: 'POST',
-      data: {
-        finder: {
-          tags: tags,
-          engine: 'truefalse'
-        }
-      },
       header: {
         'content-type': 'application/json' // 默认值
       },
 
       success: function (res) {
-        res.data = res.data.map(item => {
-          let question = item
-          let assetPath = `https://tutorweb.rikai-bots.com/assets/${item.testname}`
-          item.imageUrl = `${assetPath}/${item.cname}.jpg`
-          item.audioUrl = `${assetPath}/${item.cname}.mp3`
-          question.audio = item.audioUrl
-          question.audioAuthor = item.cname
-          question.audioName = item.testname
-          question.mode = 'aspectFill'
-          question.trueFalse = item.TF
-          question.tf = (item.TF === 'T' ? true : false)
-          question.audioPoster = "../resources/player.png"
-          question.image = item.imageUrl
-          // question.engine = item.engine
-          // question.subtitles = []
-          // question.subtitles.push(item.subtitles[0])
-          // question.subtitles.push(item.subtitles[1])
-          // question.hint = item.hint
-          console.log('q', question)
-          return question
-        })
+        console.log('res',res)
+        
         console.log(res.data)
-        that.setData({ questions: res.data, maxQ: res.data.length })
-
+        that.setData({ questions: res.data.questions, maxQ: res.data.questions.length,
+        currentQuestion:res.data.questions[0]
+        })
       },
       complete: function (res) {
         console.log("complete")
