@@ -1,0 +1,17 @@
+/* pages/hint/hint.wxss */
+
+.btn_hide{  
+ display: none;  
+}
+
+.lang {
+  position: absolute;
+  left: 5px;
+  color: #ccc;
+}
+
+.hint {
+  position: relative;
+  text-align: left;
+  left: 30px;
+}

@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundColor": "#FFE02A",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFE02A",
+    "navigationBarTitleText": "Garbage Terminator",
+    "navigationBarTextStyle": "black"
+  }
+}

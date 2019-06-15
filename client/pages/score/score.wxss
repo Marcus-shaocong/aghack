@@ -1,0 +1,15 @@
+/* pages/score/score.wxss */
+
+/* pages/score/score.wxss */
+
+.centered {
+  text-align: centered;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.playA{
+  margin-top: 50rpx;
+}

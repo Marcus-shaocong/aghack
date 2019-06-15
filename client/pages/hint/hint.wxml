@@ -1,0 +1,38 @@
+<!--pages/quiz/quiz.wxml-->
+<view class="page_title btn_hide">{{oneQ.audioPoster}}</view>
+  <view class="page">
+    <view class="pic_placeholder">
+      <view class="page_title">Answers {{currentIndex+1}}</view>
+      <view class="page_title btn_hide">{{oneQ.audioPoster}}</view>
+    </view>
+
+    <view class="page__bd">
+      <view class="weui-form-preview">
+        <view class="weui-form-preview__hd">
+          <view class="pic_placeholder">
+            <image style="width: 200px; height: 200px;" mode="{{oneQ.mode}}" src="{{oneQ.image}}" bindload="imgload"></image>
+          </view>
+        </view>
+
+        <view class="weui-form-preview__hd">
+          <view class="pic_placeholder">
+        </view>
+        <view class='hint-items'>
+          <text class="lang">{{oneQ.subtitles[0].lang}}</text>
+          <rich-text class='hint' nodes="{{oneQ.subtitles[0].text}}" ></rich-text>
+
+          <text class="lang">{{oneQ.subtitles[1].lang}}</text>
+          <rich-text class='hint' nodes="{{oneQ.subtitles[1].text}}" ></rich-text>
+          <rich-text nodes="{{oneQ.hint}}" ></rich-text>
+        </view>
+      </view>
+    </view>
+
+    <view class='debug'>
+      idx {{Q}} 
+      {{oneQ.testname}}/{{oneQ.cname}}
+    </view>
+    
+  </view>
+</view>
+

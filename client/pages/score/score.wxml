@@ -1,0 +1,30 @@
+<!--pages/score/score.wxml-->
+<view clas="page">
+
+  <view class="pic_placeholder">
+    <view class="page__title">Get Your Score</view>
+  </view>
+
+  <view class="page_bd">
+    <view wx:for="{{iterationList}}" wx:for-item="i" wx:key="key" class="weui-cells weui-cells_after-title">
+      <navigator url="/pages/hint/hint?Q={{i}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image 
+            src="{{imageUrl[results[i]]}}" 
+            style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;">
+          </image>
+        </view>
+        <view class="weui-cell__bd">
+          <rich-text nodes="{{nodes[results[i]]}}" ></rich-text>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">detail</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing playA">
+    <!-- <button class="weui-btn" type="primary" openType="share">Share</button> -->
+    <button class="weui-btn" type="secondary" bindtap='playAgain'>Play Again</button>
+  </view>
+
+ </view> 

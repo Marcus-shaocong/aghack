@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="page page__bd_spacing theme-bg">
+
+  <view class='centered' bindtap="startQuiz">
+    <image src='/resources/design/logo.png' class='logo-img' />
+  </view>
+
+  <view class="userinfo" bindtap="register" >
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="startQuiz" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover">
+      </image>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+
+      <view class="page__bd weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+    <button class="weui-btn" type="primary" bindtap="startQuiz">Start</button>
+</view>
+</view>
+  
+
+</view>

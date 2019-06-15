@@ -1,0 +1,32 @@
+/* pages/quiz/quiz.wxss */
+
+/* pages/quiz/quiz.wxss */
+
+.container{
+    height:100%;
+    width:100%;
+    background-color:"#FFE02A";
+}
+
+.pg-bg{
+  background-color:"#FFE02A";
+}
+
+.btn_display{  
+ display: block;  
+} 
+
+.btn_hide{  
+ display: none;  
+}
+
+.btn_go_to_result{
+   display: none;  
+} 
+.btn-blue {
+  background: blue !important;
+}
+
+.btn-grep {
+  background: grey !important;
+}

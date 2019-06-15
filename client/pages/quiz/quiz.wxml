@@ -1,0 +1,45 @@
+
+<view clas="page theme-bg pg-bg">
+  <view class="pic_placeholder">
+    <view class="page_title">
+      Quiz {{round+1}}
+    </view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="pic_placeholder">
+          <image style="width: 200px; height: 200px;" mode="{{currentQuestion.mode}}" src="{{currentQuestion.image}}" bindload="imgload"></image>
+        </view>
+      </view>
+
+      <view >
+        <loading wx:if="{{!isLoadingFinished }}">Loading</loading>
+      </view>
+
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <button class=" {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="primary" bindtap="answerKw" data-index="1" disabled="{{disableBtn}}">Kitchen waste</button>
+          <button class=" {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="warn" bindtap="answerHw" data-index="2" disabled="{{disableBtn}}">Harmful waste</button>
+          <button class="btn-grep {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="primary" bindtap="answerR" data-index="3" disabled="{{disableBtn}}">Recyclable</button>
+          <button class="btn-blue {{isTestDone?'btn_hide':'btn_display'}} weui-btn" type="warn" bindtap="answerO" data-index="4" disabled="{{disableBtn}}">Other waste</button>
+        </view>
+      </view>
+
+      <view class="{{tryAgain?'btn_display':'btn_hide'}}">  
+        <button bindtap="cleanOnRetry" >Try again? </button> 
+      </view> 
+
+    </view>
+  </view>
+
+  <view class='debug'>
+    {{q.testname}}/{{q.cname}}
+  </view>
+  
+</view>
+
+
+
+
