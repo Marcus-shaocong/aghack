@@ -106,12 +106,14 @@ Page({
     console.log("answer:", currentA)
     console.log("cA",this.data.questions[round].answer)
     if (currentA == this.data.questions[round].answer) {
-      this.data.finalResult.push(1)
+      //this.data.finalResult.push(1)
+      this.showCorrect()
       console.log("final", this.data.finalResult)
     } else {
-      this.data.finalResult.push(0)
+     // this.data.finalResult.push(0)
+      this.showWrong()
     }
-    this.nextQuestion()
+    //this.nextQuestion()
   },
 
   answerHw: function (e) {
@@ -121,11 +123,13 @@ Page({
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
     if (currentA === this.data.questions[round].answer) {
-      this.data.finalResult.push(1)
+      //this.data.finalResult.push(1)
+      this.showCorrect()
     } else {
-      this.data.finalResult.push(0)
+      //this.data.finalResult.push(0)
+      this.showWrong()
     }
-    this.nextQuestion()
+    //this.nextQuestion()
   },
 
   answerR: function (e) {
@@ -135,11 +139,13 @@ Page({
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
     if (currentA === this.data.questions[round].answer) {
-      this.data.finalResult.push(1)
+      //this.data.finalResult.push(1)
+      this.showCorrect();
     } else {
-      this.data.finalResult.push(0)
+      //this.data.finalResult.push(0)
+      this.showWrong();
     }
-    this.nextQuestion()
+    //this.nextQuestion()
   },
 
   answerO: function (e) {
@@ -149,11 +155,49 @@ Page({
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
     if (currentA === this.data.questions[round].answer) {
-      this.data.finalResult.push(1)
+      
+      this.showCorrect();
     } else {
-      this.data.finalResult.push(0)
+      
+      this.showWrong()
     }
-    this.nextQuestion()
+  },
+
+  showCorrect: function(){
+    var that = this
+    wx.showModal({
+      title: 'Correct!',
+      content: 'You are a genius!',
+      confirmText:'Next',
+      cancelText:'Cancel',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          that.data.finalResult.push(1);
+          that.nextQuestion()
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  showWrong: function () {
+    var that = this;
+    wx.showModal({
+      title: 'Sorry, Wrong answer!',
+      content: 'Click cancel and try it again.',
+      confirmText: 'Skip',
+      cancelText: 'Cancel',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          that.data.finalResult.push(0)
+          that.nextQuestion()
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
   cleanOnRetry: function () {
