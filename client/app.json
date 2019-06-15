@@ -1,14 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/quiz/quiz",
     "pages/logs/logs"
   ],
-  "window":{
+  "window": {
     "backgroundColor": "#FFE02A",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFE02A",
     "navigationBarTitleText": "SortEm",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap2.json"
 }
