@@ -24,9 +24,16 @@
    display: none;  
 } 
 .btn-blue {
-  background: blue !important;
+  background: rgb(87, 107,149) !important;
 }
 
 .btn-grep {
-  background: grey !important;
+  background: rgb(136, 136, 136) !important;
+}
+
+.btn-green{
+   background: rgb(9, 187, 7) !important;
+}
+.btn-red{
+  background: rgb(230, 67, 64) !important;
 }

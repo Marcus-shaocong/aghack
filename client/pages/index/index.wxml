@@ -17,12 +17,11 @@
     </block>
   </view>
 
-      <view class="page__bd weui-form-preview__bd">
-        <view class="weui-form-preview__item">
+    <view class="page__bd weui-form-preview__bd">
+    <view class="weui-form-preview__item">
     <button class="weui-btn" type="primary" bindtap="startQuiz">Start</button>
+     <button class="weui-btn" type="secondary" openType="share">Share</button>
 </view>
 </view>
-  
-
 </view>
 </view>
