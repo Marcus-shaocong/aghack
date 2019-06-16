@@ -122,7 +122,7 @@ Page({
     let currentA = e.currentTarget.dataset.index;
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
-    if (currentA === this.data.questions[round].answer) {
+    if (currentA == this.data.questions[round].answer) {
       //this.data.finalResult.push(1)
       this.showCorrect()
     } else {
@@ -138,7 +138,7 @@ Page({
     let currentA = e.currentTarget.dataset.index;
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
-    if (currentA === this.data.questions[round].answer) {
+    if (currentA == this.data.questions[round].answer) {
       //this.data.finalResult.push(1)
       this.showCorrect();
     } else {
@@ -154,7 +154,7 @@ Page({
     let currentA = e.currentTarget.dataset.index;
     console.log("answer:", round)
     console.log("cA", this.data.questions[round].answer)
-    if (currentA === this.data.questions[round].answer) {
+    if (currentA == this.data.questions[round].answer) {
       
       this.showCorrect();
     } else {
