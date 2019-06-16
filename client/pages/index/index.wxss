@@ -24,3 +24,7 @@ page {
     background-color: #eee;
 }
 
+.logo-img{
+  width:800rpx;
+  height:600rpx;
+}
